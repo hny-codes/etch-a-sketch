@@ -5,7 +5,7 @@ let GRID_UNITS = 16;
 let gridContainer = document.querySelector(".grid-container");
 
 // Event listener to change colors
-let changeElement = (box) => {
+const changeColor = (box) => {
   box.addEventListener("mouseover", () => {
     box.style.background = "#000"
   })
@@ -20,7 +20,7 @@ const fillGrid = (GRID_UNITS) => {
     gridContainer.style.gridTemplateColumns = `repeat(${GRID_UNITS}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${GRID_UNITS}, 1fr)`;
 
-    changeElement(gridElement);
+    changeColor(gridElement);
     gridContainer.appendChild(gridElement);
   }
 };
