@@ -66,3 +66,7 @@ footer {
   border-top: 2px solid rgb(245, 120, 120);
   padding-top: 1rem;
 }
+
+.footer-container a {
+    margin-right: 0.5rem;
+}
