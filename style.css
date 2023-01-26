@@ -54,6 +54,10 @@ body {
     cursor: pointer;
 }
 
+.reset-btn:hover {
+    scale: 1.1;
+}
+
 footer {
   height: 100%;
 }
