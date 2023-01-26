@@ -7,9 +7,20 @@ let gridContainer = document.querySelector(".grid-container");
 // Event listener to change colors
 const changeColor = (box) => {
   box.addEventListener("mouseover", () => {
-    box.style.background = "#000"
-  })
-}
+    box.style.background = "#000";
+  });
+};
+
+// Event listener to button
+const removeColors = () => {
+  const resetBtn = document.querySelector(".reset-btn");
+  resetBtn.addEventListener("click", () => {
+    const gridNodes = gridContainer.childNodes;
+    for (let i = 0; i < gridNodes.length; i++) {
+      gridNodes[i].style.background = "none";
+    }
+  });
+};
 
 // Fill grid with div elements
 const fillGrid = (GRID_UNITS) => {
@@ -28,6 +39,7 @@ const fillGrid = (GRID_UNITS) => {
 // Main Function
 const main = () => {
   fillGrid(GRID_UNITS);
+  removeColors();
 };
 
 main();
